@@ -21,11 +21,13 @@ pipeline {
             }
         }
         stage('Test') {
-            sh '''
-                cd /build
-                find index.html
-                npm test
-            '''
+            steps {
+                sh '''
+                    cd /build
+                    find index.html
+                    npm test
+                '''
+            }
         }
     }
 }
