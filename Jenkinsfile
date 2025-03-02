@@ -20,7 +20,7 @@ pipeline {
                 '''
             }
         }
-        stage('Test'){
+        stage('Test') {
             sh '''
                 cd /build
                 find index.html
