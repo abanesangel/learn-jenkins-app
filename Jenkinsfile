@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh '''
                     echo "Test stage"
-                    find /workspaces/learn-jenkins-app/build -name "index.html"
+                    find build -name "index.html"
                 '''
             }
         }
