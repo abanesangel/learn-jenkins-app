@@ -38,7 +38,7 @@ pipeline {
             }
             steps {
                 sh '''
-                    docker --version
+                    yum install docker -y
                     docker build -t myjenkinsapp .
                 '''
             }
