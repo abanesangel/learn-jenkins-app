@@ -112,6 +112,7 @@ pipeline {
                 sh '''
                     netlify --version
                     echo "Deploying to staging. Site ID: $NETLIFY_SITE_ID"
+                    netlify sites:list
                     netlify deploy --site=$NETLIFY_SITE_ID --auth=$NETLIFY_AUTH_TOKEN --dir=build --json > deploy-output.json
                 '''
 
